@@ -5,6 +5,7 @@
         body {
             background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxoyD1sRGGEx59N9Zwg9g70pqck1wHuTl6oQ&usqp=CAU");
             background-size: cover;
+            margin: 0; /* Remove default body margin */
         }
 
         .header {
@@ -15,6 +16,7 @@
         .header h1 {
             color: white;
             font-size: 89px;
+            cursor: pointer; /* Add cursor pointer for indicating clickability */
         }
 
         .button-container {
@@ -24,7 +26,6 @@
 
         .button-container a {
             text-decoration: none;
-            background: none;
             color: white;
         }
 
@@ -34,6 +35,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 50px;
+            background: none; /* Remove background */
         }
 
         .footer {
@@ -41,21 +43,49 @@
             margin-top: 30px;
         }
 
-        /* Mengatur jarak antara tombol "INDONESIA" dan "ENGLISH" */
-        .button-INDONESIA {
-            margin-right: 480px;
+        /* New CSS for the button creator */
+        .button-creator {
+            margin-top: 20px;
+            background: none; /* Remove background */
+            position: fixed; /* Fix the button to the bottom */
+            bottom: 0; /* Align the button to the bottom */
+            left: 50%; /* Center the button horizontally */
+            transform: translateX(-50%); /* Adjust for centering */
+        }
+
+        /* Updated CSS for the "Show Creator" button */
+        .button-creator button {
+            color: white; /* Set text color to blue */
+            background: none; /* Remove background */
         }
     </style>
 </head>
 <body>
-    <div class="header">
+    <div class="header" onclick="redirectToYouTube()">
         <h1>language-quotes</h1>
     </div>
     <div class="button-container">
         <a href="https://fahmen.github.io/NEVADA-quotes" class="button button-indonesia">INDONESIA</a>
         <a href="https://fahmen.github.io/various-quotes/" class="button">ENGLISH</a>
     </div>
+    
+    <!-- New button for the creator -->
+    <div class="button-container button-creator">
+        <button class="button" onclick="displayCreator()">Show Creator</button>
+    </div>
+
     <div class="footer">
     </div>
+
+    <!-- Script to display the creator name -->
+    <script>
+        function displayCreator() {
+            alert("©fahril ahmad");
+        }
+
+        function redirectToYouTube() {
+            window.location.href = "https://youtube.com/@fahrilajabang785?si=EPv3yfs75g-b2AqP";
+        }
+    </script>
 </body>
 </html>
